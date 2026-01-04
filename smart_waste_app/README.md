@@ -146,13 +146,64 @@
 
 ### 👨‍💼 Admin Screens
 
-| Admin Dashboard | All Pickups | Manage Users |
-|:---:|:---:|:---:|
-| <img src="screenshots/admin/home.png" width="200"> | <img src="screenshots/admin/pickups.png" width="200"> | <img src="screenshots/admin/users.png" width="200"> |
+#### Dashboard & Overview
 
-| Manage Collectors | Reward Requests | Settings |
+| Admin Dashboard | Quick Actions | Settings |
 |:---:|:---:|:---:|
-| <img src="screenshots/admin/collectors.png" width="200"> | <img src="screenshots/admin/rewards.png" width="200"> | <img src="screenshots/admin/settings.png" width="200"> |
+| ![Admin Dashboard](screenshots/admin/admin_dashboard.png) | ![Admin Home](screenshots/admin/admin_home_scrolled.png) | ![Admin Settings](screenshots/admin/admin_settings.png) |
+| *System health monitoring, 6 metric cards showing users (7), collectors (2), pickups (3), 100% success rate with growth indicators* | *Quick access to Manage Users, Manage Collectors, Reward Requests, All Pickup Requests. Recent activity feed* | *Admin profile (rajaswamy2004@gmail.com), Dark Mode, Push Notifications, Help & Support, Logout* |
+
+#### Management Features
+
+| Manage Users | Manage Collectors | All Pickups |
+|:---:|:---:|:---:|
+| ![Manage Users](screenshots/admin/manage_users.png) | ![Manage Collectors](screenshots/admin/manage_collectors.png) | ![All Pickups](screenshots/admin/all_pickups.png) |
+| *Search & filter users, Add User button. View 7 registered users with contact details, addresses, join dates, and active status* | *Manage 2 collectors: Ranj and Sanjay Raam. Track assignments (0/3 completed), street assignments, vehicle status. Add Collector option* | *Monitor pickups across 4 tabs (Pending/Assigned/In Progress/Completed). View 3 completed pickups with user details, schedules, assignments* |
+
+---
+
+#### 🎯 Admin Capabilities Highlighted
+
+**System Monitoring**
+- 💚 **System Health** - Real-time service status monitoring
+- 📊 **Dashboard Metrics** - 6 key performance indicators
+  - Total Users: 7 (↗ 12%)
+  - Active Collectors: 2 (↗ 5%)
+  - Total Pickups: 3 (↗ 18%)
+  - Pending Requests: 0 (→ 0%)
+  - Completed: 3 (↗ 25%)
+  - Success Rate: 100% (↗ 3%)
+
+**User Management**
+- 👥 **User Directory** - Complete user database with search and filters
+- ➕ **Add Users** - Create new user accounts
+- 📱 **Contact Info** - Phone numbers and email addresses
+- 📍 **Location Data** - Full address management
+- 📅 **Join Tracking** - User registration dates
+- ✅ **Status Monitoring** - Active/Inactive user states
+
+**Collector Management**
+- 🚛 **Collector Oversight** - Monitor all waste collectors
+- 📈 **Performance Stats** - Track assigned, completed, and total pickups
+- 🗺️ **Street Assignment** - Assign/change collection routes
+- 🚗 **Vehicle Management** - Track vehicle assignments
+- 📊 **Completion Tracking** - Individual collector performance
+- ➕ **Add Collectors** - Onboard new waste collectors
+
+**Pickup Oversight**
+- 📋 **Request Management** - View all pickup requests by status
+- 🔄 **Status Tracking** - Pending → Assigned → In Progress → Completed
+- 👤 **User Information** - Full requester details
+- 📅 **Scheduling** - Date and time slot management
+- 🗑️ **Waste Categories** - Organic, Recyclable, Hazardous, E-Waste
+- 👨‍✈️ **Collector Assignment** - View assigned collectors
+- ❌ **Delete Options** - Remove pickup requests
+
+**Quick Actions**
+- ⚡ **Fast Access** - One-tap navigation to key features
+- 🎁 **Reward Approvals** - Approve/reject eco reward redemptions
+- 📊 **Recent Activity** - Live feed of completed pickups
+- 📈 **View All** - Comprehensive activity logs
 
 ---
 
