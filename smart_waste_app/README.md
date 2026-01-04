@@ -70,7 +70,129 @@
 
 ## 📱 Screenshots
 
-*Screenshots will be added here*
+### 🎨 Authentication Screens
+
+<div align="center">
+
+| Splash Screen | Welcome Screen | Phone Login |
+|:-------------:|:--------------:|:-----------:|
+| <img src="screenshots/auth/splash.png" width="200"/> | <img src="screenshots/auth/login_options.png" width="200"/> | <img src="screenshots/auth/phone_login.png" width="200"/> |
+| **Light Theme Splash** | **EcoCollect Landing** | **OTP Verification** |
+| Green gradient background with Smart Waste branding and recycling icon. Shows app tagline "Collection & Scheduling" and eco-friendly message. | Dark theme welcome screen featuring two login options: Phone (fast & secure OTP) and Email. Includes quick access buttons for scheduling, tracking, and rewards. | Phone number input with country code selector (+91 India). Supports OTP-based authentication with option to switch to email login. |
+
+</div>
+
+<div align="center">
+
+| Email Login | Sign Up - Step 1 | Sign Up - Step 2 |
+|:-----------:|:----------------:|:----------------:|
+| <img src="screenshots/auth/email_login.png" width="200"/> | <img src="screenshots/auth/signup_step1.png" width="200"/> | <img src="screenshots/auth/signup_step2.png" width="200"/> |
+| **Traditional Login** | **Personal Information** | **Contact & Address** |
+| Dark theme email login with password field, visibility toggle, and "Forgot Password?" link. Alternative to phone authentication. | First step of three-step registration: collect user's full name. Green theme with progress indicator. Option to use Phone OTP for quick signup. | Second step: gather email, phone number, and complete address details (house/apt number, street, city, zip code, state). Includes back button for navigation. |
+
+</div>
+
+<div align="center">
+
+| Sign Up - Step 3 |
+|:----------------:|
+| <img src="screenshots/auth/signup_step3.png" width="200"/> |
+| **Security Setup** |
+| Final registration step: create password with confirmation field. Shows password requirements (minimum 6 characters with letters and numbers). Includes visibility toggles for both password fields. |
+
+</div>
+
+### 📋 Screen Descriptions
+
+#### **Splash Screen** (`splash.png`)
+- **Theme**: Light with vibrant green gradient (#00FF88)
+- **Design**: Minimalist splash with rounded square icon containing recycling symbol
+- **Branding**: "Smart Waste" title with "Collection & Scheduling" subtitle
+- **Footer**: Eco-friendly message with recycling emoji
+
+#### **Welcome Screen** (`login_options.png`)
+- **Theme**: Dark mode (#1A2332 background)
+- **Branding**: "EcoCollect" with "Smart Waste Management" tagline
+- **Icon**: Circular glowing recycling symbol with gradient effect
+- **Login Options**:
+  - 🟢 **Phone** - Fast & secure OTP verification (green button)
+  - 🟣 **Email** - Use email & password (purple/gradient button)
+- **Quick Actions**: Schedule Pickups, Track Status, Earn Rewards (icon buttons)
+- **Footer**: "Sign Up Free" CTA for new users
+
+#### **Phone Login** (`phone_login.png`)
+- **Theme**: Dark mode with consistent styling
+- **Icon**: Glowing phone symbol
+- **Title**: "Phone Login" in gradient green text
+- **Features**:
+  - Country code selector with flag (India +91)
+  - Phone number input field with icon
+  - "Send OTP" primary action button
+  - "OR" divider
+  - "Login with Email" alternative button
+- **Description**: "Enter your phone number to receive a one-time password"
+
+#### **Email Login** (`email_login.png`)
+- **Theme**: Dark mode matching app theme
+- **Form Fields**:
+  - Email address input with envelope icon
+  - Password input with lock icon and visibility toggle
+- **Actions**:
+  - "Sign In" primary button
+  - "Forgot Password?" recovery link
+- **Footer**: "Sign Up Free" for new user registration
+- **Alternative**: Phone OTP signup option
+
+#### **Sign Up - Personal Info** (`signup_step1.png`)
+- **Theme**: Light mode with green (#4CAF50) background
+- **Progress**: Step 1/3 indicator (Personal → Contact → Security)
+- **Title**: "Personal Info" with person icon
+- **Fields**: Full Name input (placeholder: "John Doe")
+- **Navigation**:
+  - "Continue" primary action
+  - "Sign In" link for existing users
+- **Alternative**: "Sign Up with Phone OTP" for quick registration
+
+#### **Sign Up - Contact Details** (`signup_step2.png`)
+- **Theme**: Light mode with green accent
+- **Progress**: Step 2/3 (completed Personal, active Contact)
+- **Title**: "Contact Details" with phone icon
+- **Contact Section**:
+  - Email Address field
+  - Phone Number field with international format
+- **Address Section**:
+  - House/Apartment Number
+  - Street Name
+  - City (half width) | Zip Code (half width)
+  - State/Province
+- **Navigation**: "Back" and "Continue" buttons
+- **Icons**: Green icons for each field type (email, phone, home, street, city, location, map)
+
+#### **Sign Up - Security** (`signup_step3.png`)
+- **Theme**: Light mode with green theme
+- **Progress**: Step 3/3 (all previous steps completed)
+- **Title**: "Secure Your Account" with lock icon
+- **Form**:
+  - Password field with visibility toggle
+  - Confirm Password field with visibility toggle
+  - Info box: Password requirements (6+ characters, letters + numbers)
+- **Actions**:
+  - "Back" button
+  - "Create Account" primary button (with checkmark)
+- **Footer**: Alternative login/signup options
+- **Password Requirements**: Clear light green info box with validation rules
+
+---
+
+### 🎯 Key UI Features Demonstrated
+
+- ✅ **Dual Theme Support**: Light (green) and Dark (navy) modes
+- ✅ **Multi-Step Registration**: Progressive 3-step signup process
+- ✅ **Flexible Authentication**: Phone OTP, Email/Password, Quick Signup
+- ✅ **Consistent Design**: Gradient buttons, rounded corners, icon consistency
+- ✅ **User Guidance**: Progress indicators, helpful descriptions, password requirements
+- ✅ **Accessibility**: Visibility toggles, back navigation, alternative login methods
+- ✅ **Professional Branding**: Dual identity (Smart Waste/EcoCollect)
 
 ---
 
