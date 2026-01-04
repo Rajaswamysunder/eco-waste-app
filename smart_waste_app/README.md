@@ -196,6 +196,175 @@
 
 ---
 
+### 👤 User Screens
+
+<div align="center">
+
+| Home Screen | Home - Scrolled | Profile |
+|:-----------:|:---------------:|:-------:|
+| <img src="screenshots/user/home.png" width="200"/> | <img src="screenshots/user/home_scrolled.png" width="200"/> | <img src="screenshots/user/profile.png" width="200"/> |
+| **Dashboard** | **Recycling Education** | **Account Info** |
+| Personalized greeting with eco tip of the day. Shows statistics dashboard (Pending, Active, Completed pickups with 0% completion rate). Features waste category cards and FAB for new pickup. | Educational section showing organic waste recycling process (Collect → Sort → Compost → Fertilizer). Displays pickup history with tabs (All, Active, Completed) and empty state prompt. | User profile with avatar, verified email badge, full contact details (phone: 8148155805, address: Trichy). Activity statistics showing 0 pickups, 0kg waste recycled, and 0 eco points earned. |
+
+</div>
+
+<div align="center">
+
+| Eco Rewards | Settings | Notifications |
+|:-----------:|:--------:|:-------------:|
+| <img src="screenshots/user/rewards.png" width="200"/> | <img src="screenshots/user/settings.png" width="200"/> | <img src="screenshots/user/notifications.png" width="200"/> |
+| **Points System** | **Preferences** | **Updates** |
+| Gamified reward tiers from Eco Starter (20pts) to Earth Guardian (200pts). Next reward: ₹25 grocery voucher. Info box explains earning 10 points per pickup + 5 bonus points every 5 pickups. Member since Dec 2025. | Account management with Edit Profile option. Preferences toggle for Dark Mode, Notifications (enabled), and Location Services (enabled). Support links for Help, About, Privacy, Terms. Logout option and version info (1.0.0). | Clean notification center with Unread/All tabs. Empty state showing no unread notifications. Features mark-all-read button and filters for managing push notifications. |
+
+</div>
+
+<div align="center">
+
+| Request Pickup | Location Picker |
+|:--------------:|:---------------:|
+| <img src="screenshots/user/request_pickup.png" width="200"/> | <img src="screenshots/user/map_location.png" width="200"/> |
+| **Schedule Collection** | **Interactive Map** |
+| Comprehensive pickup form with waste type selector (Organic/Recyclable/E-Waste), quantity input (2 bags), date/time picker (Mon, Jan 5 at 6:00 AM), and address selection. Includes info tooltip explaining organic waste types. | Google Maps integration showing Trichy location with draggable green pin. Displays selected coordinates (Lat: 10.7905, Lng: 78.7047). Quick select buttons for common areas and manual address entry option. |
+
+</div>
+
+### 📋 User Screen Descriptions
+
+#### **Home Screen** (`home.png`)
+- **Header**: Personalized greeting "Good Evening Rajaswamy" with profile, notification, and settings icons
+- **Eco Tip Card**: Daily educational tip with lightbulb icon - "Separate your waste to help reduce landfill impact"
+- **Statistics Dashboard**:
+  - Dark navy card with gradient background
+  - Three status indicators: Pending (0), Active (0), Completed (0)
+  - Completion rate progress bar showing 0%
+  - Call-to-action: "Schedule your first pickup to start tracking!"
+  - Badge showing "0 Total" pickups
+- **Waste Categories Section**:
+  - **Organic** (green): Food scraps, leaves, garden waste
+  - **Recyclable** (blue): Paper, plastic, glass, metal
+  - **E-Waste** (pink): Electronics, batteries, cables
+  - Each card has icon, description, and "Tap" button
+- **Floating Action Button**: Large green "New Pickup" button with plus icon
+
+#### **Home Screen - Scrolled** (`home_scrolled.png`)
+- **How Recycling Works**: 
+  - Educational carousel with organic waste example
+  - Visual flow: Collect → Sort → Compost → Fertilizer
+  - Result card: "Organic Fertilizer - Food scraps and garden waste become nutrient-rich compost for farming"
+  - Environmental impact: "Reduces methane by 60%"
+  - Pagination dots showing more slides available
+- **Your Pickups Section**:
+  - Header with "View History" link
+  - Three tabs: All (active), Active, Completed
+  - Empty state with trash bin icon
+  - Message: "No pickup requests yet" with instruction to tap button below
+- **FAB**: Persistent "New Pickup" button
+
+#### **Profile Screen** (`profile.png`)
+- **Header**: Back button and edit button on green background
+- **Avatar**: Large circular profile with "R" initial and camera icon for photo upload
+- **User Info**: 
+  - Name: "Rajaswamy"
+  - Role badge: "USER" in green
+- **Account Information Section**:
+  - Email: rs8523@gmail.com with "Verified" badge
+  - Full Name: Rajaswamy
+- **Contact Details Section**:
+  - Phone Number: 8148155805
+  - Address: Trichy
+- **Activity Stats** (3 metrics):
+  - 🗑️ Pickups: 0
+  - 🌿 Waste Recycled: 0kg
+  - ⭐ Eco Points: 0
+
+#### **Eco Rewards Screen** (`rewards.png`)
+- **Next Reward Card** (prominent green gradient):
+  - ₹25 Grocery Voucher
+  - Current: 0 pts | Required: 20 pts
+  - Progress bar showing 20 points to unlock
+- **Reward Tiers** (all locked initially):
+  1. **Eco Starter** (20 pts): ₹25 Grocery Voucher - Redeem at local grocery stores
+  2. **Green Champion** (50 pts): ₹75 Shopping Coupon - Valid at partner retail stores
+  3. **Eco Warrior** (100 pts): ₹150 Home Essentials Kit - Eco-friendly home products
+  4. **Earth Guardian** (200 pts): ₹300 + Free Month Service - Premium rewards package
+- **Info Box**: "How to earn points? Earn 10 points per pickup + bonus 5 points for every 5 pickups!"
+- **Footer**: "Member since Dec 2025"
+
+#### **Settings Screen** (`settings.png`)
+- **Header**: Gear icon with "Settings - Manage your preferences"
+- **Account Section**:
+  - Profile avatar with "R"
+  - Name: Rajaswamy
+  - Email: rs8523@gmail.com
+  - Role: USER badge
+  - "Edit Profile" button
+- **Preferences**:
+  - 🌙 **Dark Mode**: Switch between light and dark theme (currently OFF)
+  - 🔔 **Notifications**: Receive pickup reminders and updates (ON)
+  - 📍 **Location Services**: Allow app to access your location (ON)
+- **Support Section**:
+  - ❓ Help & Support: FAQs and customer support
+  - ℹ️ About: App version and information
+  - 🛡️ Privacy Policy: Read our privacy policy
+  - 📄 Terms of Service: Read our terms and conditions
+- **Footer**:
+  - 🚪 Logout (red text): Sign out of your account
+  - 🍃 Eco Waste logo
+  - Version 1.0.0
+  - Tagline: "Making the planet cleaner, one pickup at a time 🌍"
+
+#### **Notifications Screen** (`notifications.png`)
+- **Header**: Bell icon, "Notifications", "0 unread"
+- **Tabs**: Unread (active) | All
+- **Empty State**:
+  - Bell with slash icon (gray)
+  - "No unread notifications" message
+- **Features**: Mark all as read button (top right checkmarks)
+
+#### **Request Pickup Screen** (`request_pickup.png`)
+- **Header**: "Request Pickup - Schedule your waste collection"
+- **Select Waste Type**:
+  - Three cards: Organic (selected with checkmark), Recyclable, E-Waste
+  - Info banner: "Food waste, garden waste, biodegradables"
+- **Quantity**: Input field showing "2" with waste bag icon
+- **Schedule**:
+  - Date picker: "Mon, Jan 5" with calendar icon
+  - Time picker: "6:00 AM" with clock icon
+- **Pickup Address**:
+  - Checkbox: "Use profile address" (checked)
+  - Address display: "Trichy" with location pin
+  - Button: "Pick from Map" (outlined green)
+
+#### **Select Location Screen** (`map_location.png`)
+- **Map View**: 
+  - Interactive OpenStreetMap showing Trichy area (Subramaniyapuram, Ponmalai)
+  - Green location pin marker on selected spot
+  - Tooltip: "Tap on map to select location"
+  - Target/locate-me button (top right)
+- **Selected Location Card**:
+  - "Trichy" address
+  - Coordinates: Lat: 10.7905, Lng: 78.7047
+- **Manual Entry**: "Or enter address manually..." with location icon
+- **Quick Select** (common locations):
+  - Trichy Main, Srirangam, Woraiyur
+  - Thillai Nagar, KK Nagar, Cantonment
+- **Confirm Button**: Large green "Confirm Location" button with checkmark
+
+---
+
+### 🎯 User Features Highlighted
+
+- ✅ **Personalized Dashboard**: Time-based greetings, statistics, and progress tracking
+- ✅ **Educational Content**: Daily eco tips and recycling process information
+- ✅ **Gamification**: Points system with tiered rewards and achievement tracking
+- ✅ **Smart Scheduling**: Flexible date/time picker with waste type categorization
+- ✅ **Map Integration**: Interactive location selection with quick area buttons
+- ✅ **Profile Management**: Complete account info with activity statistics
+- ✅ **Settings Control**: Theme toggle, notifications, and location permissions
+- ✅ **Empty States**: User-friendly prompts guiding first-time actions
+
+---
+
 ## 🛠️ Tech Stack
 
 | Technology | Purpose |
