@@ -1,0 +1,38 @@
+{
+  "appTitle": "Smart Waste Collection",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+  "login": "Login",
+  "@login": {
+    "description": "Login button text"
+  },
+  "signup": "Sign Up",
+  "@signup": {
+    "description": "Sign up button text"
+  },
+  "pickupHistory": "Pickup History",
+  "@pickupHistory": {
+    "description": "Title for the pickup history screen"
+  },
+  "viewPastPickups": "View all your past pickups",
+  "@viewPastPickups": {
+    "description": "Subtitle for the pickup history screen"
+  },
+  "all": "All",
+  "@all": {
+    "description": "Tab label: All"
+  },
+  "pending": "Pending",
+  "@pending": {
+    "description": "Status: Pending"
+  },
+  "completed": "Completed",
+  "@completed": {
+    "description": "Status: Completed"
+  },
+  "cancelled": "Cancelled",
+  "@cancelled": {
+    "description": "Status: Cancelled"
+  }
+}
