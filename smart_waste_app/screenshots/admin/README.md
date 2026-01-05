@@ -2,133 +2,90 @@
 
 This folder contains screenshots of the admin-facing screens of the Smart Waste Collection App.
 
-## Required Screenshots
+## Admin Screenshots (8 total)
 
 ### 1. **admin_dashboard.png**
 Admin home dashboard showing:
 - Purple gradient header with "Admin Panel" title
 - Admin name: "RAJASWAMY"
 - Notification and settings icons
-- System Health card:
-  - "All services running smoothly ✓"
-  - "Online" status badge (green)
+- System Health card: "All services running smoothly ✓" (Online)
 - Dashboard Overview with 6 metric cards:
-  - **Total Users**: 7 registered customers (↗ 12%)
-  - **Collectors**: 2 active collectors (↗ 5%)
-  - **Total Pickups**: 3 all time requests (↗ 18%)
-  - **Pending**: 0 awaiting action (↘ 0%)
-  - **Completed**: 3 successfully done (↗ 25%)
-  - **Success Rate**: 100% completion rate (↗ 3%)
+  - Total Users: 7 (↗ 12%)
+  - Collectors: 2 (↗ 5%)
+  - Total Pickups: 4 (↗ 18%)
+  - Pending: 1 (↘ 8%)
+  - Completed: 3 (↗ 25%)
+  - Success Rate: 75% (↗ 3%)
 
-### 2. **admin_home_scrolled.png**
-Admin dashboard scrolled showing Quick Actions:
-- Quick Actions section with 4 cards:
-  - **Manage Users**: View and manage all registered users
-  - **Manage Collectors**: Add, edit, or remove waste collectors
-  - **Reward Requests**: Approve or reject eco reward redemptions
-  - **All Pickup Requests**: Monitor and manage all pickup requests
-- Recent Activity section with "View All" link:
-  - Pushpa Ranjani: Organic • 2 (COMPLETED)
-  - Sanjayraam: Organic • 2 bags (COMPLETED)
+### 2. **dashboard_overview.png**
+Dashboard overview with quick actions visible:
+- Full dashboard with metric cards
+- Quick Actions section with 4 action cards
+- Recent Activity section showing user pickups
 
-### 3. **manage_users.png**
+### 3. **quick_actions.png**
+Quick Actions panel with main admin functions:
+- Manage Users (blue)
+- Manage Collectors (cyan)
+- Reward Requests (orange)
+- All Pickup Requests (purple)
+- Recent Activity below
+
+### 4. **manage_users.png**
 User management screen (blue theme):
-- Header: "Manage Users - View and manage all registered users"
-- Search bar with "Search users..." placeholder
-- "Add User" button (blue)
-- Two filter dropdowns:
-  - Location filter: "All"
-  - Role filter: "All"
-- User list showing 3 users:
-  - **mack** (M avatar, green)
-    - Email: jaimack123hi@gmail.com
-    - Phone: 8148155850
-    - Address: H5, nelson road, Trichy, Tamil Nadu - 621103
-    - Joined: Jan 02, 2026
-    - Status: Active
-  - **Pushpa Ranjani** (P avatar, green)
-    - Email: ranjaniprc185@gmail.com
-    - Phone: 6381934705
-    - Address: no32, mrv nagar, trichy, tamilnadu - 620002
-    - Joined: Jan 03, 2026
-    - Status: Active
-  - **Sanjayraam** (S avatar, green)
-    - Email: sanjayraam152@gmail.com
-    - Phone: +918072963604
-    - Address: 4/208,Dr.Radha krishnan Nagar, GVN COLLE...
+- Search and filter users
+- User list with 3 active users:
+  - mack (Active, Jan 02, 2026)
+  - Pushpa Ranjani (Active, Jan 03, 2026)
+  - Sanjayraam (Active)
+- Add User button
 
-### 4. **manage_collectors.png**
+### 5. **manage_collectors.png**
 Collector management screen (green theme):
-- Header: "Manage Collectors"
-- Two collector cards:
-  - **Ranj** (R avatar, blue) - Incomplete status, Offline
-    - Email: ranj@gmail.com
-    - Stats: 0 Assigned, 0 Completed, 0 Total
-    - Phone: 8148155850
-    - Location: Main Street
-    - Vehicle: No vehicle assigned (orange)
-    - "Change Street" button (blue)
-  
-  - **Sanjay Raam** (S avatar, blue) - Incomplete status, Offline
-    - Email: rajaswamy2005@gmail.com
-    - Stats: 0 Assigned, 3 Completed, 3 Total
-    - Phone: 9655076696
-    - Location: No street assigned (red)
-    - Vehicle: No vehicle assigned (orange)
-    - "Assign Street" button (blue)
+- Collector profiles with detailed stats
+- Ranj: 0 Assigned, 0 Completed
+- Sanjay Raam: 0 Assigned, 3 Completed
+- Change/Assign Street buttons
+- Add Collector floating button
 
-- "Add Collector" floating action button (green)
+### 6. **all_pickups.png**
+All pickups management (purple theme):
+- Status tabs: Pending, Assigned, In Progress, Completed
+- Pickup card showing:
+  - Waste type: Organic (Qty: 2)
+  - Customer: Rajaswamy
+  - Status: PENDING
+  - Assign Collector button
 
-### 5. **all_pickups.png**
-Pickup management screen (purple theme):
-- Header: "All Pickups - Monitor and manage all pickup requests"
-- Filter icon (top right)
-- Status tabs: Pending, Assigned, In Progress, Completed (active)
-- Pickup list showing 3 completed pickups:
-  
-  1. **Organic** - Qty: 2 (COMPLETED)
-     - User: Pushpa Ranjani
-     - Phone: 6381934705
-     - Address: no32, mrv nagar, trichy, tamilnadu - 620002
-     - Schedule: Mon, Jan 05 • MORNING
-     - Assigned to: Sanjay Raam
-     - "Delete Pickup" button (red)
-  
-  2. **Organic** - Qty: 2 bags (COMPLETED)
-     - User: Sanjayraam
-     - Phone: +918072963604
-     - Address: 4/208,Dr.Radha krishnan Nagar, GVN COLLEGE POST, kovilpatti, Tamil Nadu - 628502
-     - Schedule: Sun, Jan 04 • MORNING
-     - Assigned to: Sanjay Raam
-     - "Delete Pickup" button (red)
-  
-  3. **Hazardous** - Qty: 1 (COMPLETED)
-
-### 6. **admin_settings.png**
+### 7. **admin_settings.png**
 Admin settings screen (purple theme):
-- Header: "Settings - Manage your preferences"
-- Profile section:
-  - Profile photo (circular)
-  - Name: RAJASWAMY
-  - Email: rajaswamy2004@gmail.com
-  - Role badge: Administrator (purple)
-  - Edit icon
-- **Appearance** section:
-  - Dark Mode toggle (off) - "Switch to dark theme"
-- **Notifications** section:
-  - Push Notifications toggle (on) - "Receive pickup updates"
-- **Support** section:
-  - Help & Support - "Get help with the app"
-  - About - "App info and version"
-- Logout button (red)
+- Profile section with administrator info
+- Appearance: Dark Mode toggle
+- Notifications: Push Notifications toggle
+- Support section with Help & Support and About
+- Logout button
 
-## File Naming Convention
+### 8. **help_support.png**
+Help and support screen (green theme):
+- Quick Contact options:
+  - Call Us: +91 8148155805
+  - Email Support: support@smartwaste.com
+  - Live Chat: Chat with support team
+- Frequently Asked Questions (expandable)
+
+## File Listing
 
 ```
 admin_dashboard.png
-admin_home_scrolled.png
+dashboard_overview.png
+quick_actions.png
 manage_users.png
 manage_collectors.png
+all_pickups.png
+admin_settings.png
+help_support.png
+````
 all_pickups.png
 admin_settings.png
 ```

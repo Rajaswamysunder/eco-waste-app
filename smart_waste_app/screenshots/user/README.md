@@ -167,19 +167,57 @@ Notifications screen displaying:
 - Empty state with notification icon
 - Message: "No unread notifications"
 
-### 10. **activity_stats.png** (Alternative: Eco Rewards Focus)
-User rewards and activity tracking showing:
-- Eco Rewards section with:
-  - Next Reward: ₹25 Grocery Voucher (0 pts)
-  - 20 points required to unlock
-  - Progress bar visualization
-- Reward Tiers:
-  - Eco Starter (20 pts): ₹25 Grocery Voucher
-  - Green Champion (50 pts): ₹75 Shopping Coupon
-  - Eco Warrior (100 pts): ₹150 Home Essentials Kit
-  - Earth Guardian (200 pts): ₹300 + Free Month Service
-- Info: "How to earn points? Earn 10 points per pickup + bonus 5 points for every 5 pickups!"
-- Member since: Dec 2025
+### 10. **app_guide.png**
+App onboarding guide showing how the service works:
+- Header: "App Guide"
+- 5-step process with numbered cards:
+  1. **Create Account** - Sign up with email and phone
+  2. **Request Pickup** - Select waste type, quantity, schedule
+  3. **Collector Assigned** - Nearby collector assigned to request
+  4. **Waste Collected** - Collector picks up waste at scheduled time
+  5. **Recycled & Processed** - Waste responsibly recycled/disposed
+- "Have Feedback?" section with Send Feedback button
+
+### 11. **pickup_details_tracking.png**
+Pickup details and tracking screen:
+- Header: "Organic - Quantity: 2"
+- Current Status: "Live" (ASSIGNED status)
+- Status timeline showing:
+  - Requested (completed)
+  - Assigned (completed)
+  - On the Way (upcoming)
+  - Collected (upcoming)
+- Schedule section:
+  - Date: Mon, Jan 05, 2026
+  - Time: MORNING
+- Pickup Location:
+  - Address: Trichy (with location pin)
+  - Map view showing pickup location
+  - Directions button
+
+### 12. **pickup_details_collector.png**
+Pickup details showing assigned collector:
+- Schedule and location information
+- Collector section:
+  - Name: Sanjay Raam
+  - Role: Waste Collector
+  - Phone call button (green)
+- Request ID and creation time
+- Status: Live with "ASSIGNED" badge
+
+### 13. **ecobot_assistant.png**
+EcoBot chatbot assistant screen:
+- Header: "EcoBot - Online"
+- Welcome message from EcoBot:
+  - "Hello! 👋 I'm EcoBot, your Smart Waste Collection assistant"
+  - Features: Scheduling pickups, tracking requests, eco points & rewards, waste types & recycling, account issues
+- Question: "How can I help you today?"
+- Quick action buttons:
+  - Schedule pickup
+  - Track my order
+  - Eco points
+  - Contact support
+- Message input field at bottom
 
 ## File Naming Convention
 

@@ -2,52 +2,103 @@
 
 This folder contains screenshots of the collector-facing screens of the Smart Waste Collection App.
 
-## Required Screenshots
+## Collector Screenshots (6 total)
 
 ### 1. **collector_dashboard.png**
 Collector home dashboard showing:
-- Blue gradient header
-- "Collector Dashboard" title
+- Blue gradient header with "Collector Dashboard"
 - Collector name: "Sanjay Raam"
-- Notification badge (2 notifications) and settings icons
-- Two quick stat cards:
-  - **0 Pending** (with ellipsis icon)
-  - **0 Today's Pickups** (with calendar icon)
+- Notification badge (3) and settings icons
+- Quick stat cards:
+  - 0 Pending requests
+  - 0 Today's Pickups
 - Four status metric cards:
-  - **Assigned**: 0 (orange) - Awaiting confirmation
-  - **Confirmed**: 0 (blue) - Ready for pickup
-  - **In Progress**: 0 (purple) - On the way
-  - **Completed**: 3 (green) - Successfully collected
-- Status tabs: Assigned, Confirmed, In Progress, Completed
-- Empty state: "No assigned pickups" with inbox icon
+  - Assigned: 1 (orange) - Awaiting confirmation
+  - Confirmed: 0 (blue) - Ready for pickup
+  - In Progress: 0 (purple) - On the way
+  - Completed: 3 (green) - Successfully collected
+- Status tabs showing empty in-progress state
 
-### 2. **collector_settings.png**
+### 2. **collector_dashboard_confirmed.png**
+Collector dashboard showing confirmed pickup:
+- Status updated: Confirmed: 1
+- Dashboard metrics updated
+- Shows transition from Assigned to Confirmed state
+
+### 3. **add_new_collector.png**
+Add New Collector form (modal):
+- Header: "Add New Collector"
+- Personal Details section:
+  - Full Name field (with person icon)
+  - Email field (with envelope icon)
+  - Phone field (with phone icon) - must be 10 digits
+  - Address field (with home icon)
+- Vehicle Details section:
+  - Vehicle Type dropdown (with truck icon)
+  - Vehicle Number field (format: TN 01 AB 1234)
+- Assignment (Optional) section:
+  - Assign Street dropdown
+
+### 4. **add_collector_form.png**
+Add Collector form continuation:
+- Shows all form fields with validations
+- Assignment section with street selection
+- Info banner: "* indicates required fields. Vehicle and street can be added later"
+- Cancel and "Add Collector" buttons (green)
+
+### 5. **collector_settings.png**
 Collector settings screen (blue theme):
-- Header: "Settings"
+- Header: "Settings - Manage your preferences"
 - Profile section:
-  - Circular avatar with "S" initial
+  - Avatar with "S" initial
   - Name: Sanjay Raam
   - Email: rajaswamy2005@gmail.com
   - Role badge: Collector (blue)
   - Edit icon
 - **Appearance** section:
-  - Dark Mode toggle (off) - "Switch to dark theme"
+  - Dark Mode toggle (off)
 - **Notifications** section:
   - Push Notifications toggle (on) - "Receive pickup updates"
   - Location Access toggle (on) - "For navigation and tracking"
 - **Support** section:
-  - Help & Support - "Get help with the app"
-  - About - "App info and version"
+  - Help & Support
+  - About
 - Logout button (red)
 
-### 3. **help_support.png**
-Help and support screen (green theme):
-- Green header with back button
-- **Quick Contact** section with 3 cards:
-  - **Call Us**: +91 8148155805 (green phone icon)
-  - **Email Support**: support@smartwaste.com (blue envelope icon)
-  - **Live Chat**: Chat with our support team (purple chat icon)
-- **Frequently Asked Questions** section with 5 expandable items:
+### 6. **collector_in_progress.png**
+Collector dashboard showing in-progress pickups:
+- Header: "Collector Dashboard - Sanjay Raam"
+- Status metrics with In Progress tab active
+- Shows 0 In Progress pickups
+- Empty state message
+
+## File Listing
+
+```
+collector_dashboard.png
+collector_dashboard_confirmed.png
+add_new_collector.png
+add_collector_form.png
+collector_settings.png
+collector_in_progress.png
+```
+
+## Color Scheme
+
+- **Primary**: Blue (#0066CC)
+- **Secondary**: Green (#00AA44)
+- **Status Colors**:
+  - Pending/Assigned: Orange
+  - Confirmed: Blue
+  - In Progress: Purple
+  - Completed: Green
+
+## Image Specifications
+
+- **Format**: PNG
+- **Resolution**: iPhone screen size (1170 x 2532 pixels)
+- **Quality**: High resolution, retina display
+- **Content**: Actual collector app screens
   - "How do I schedule a pickup?"
   - "What types of waste do you collect?"
   - "How do I track my pickup?"
