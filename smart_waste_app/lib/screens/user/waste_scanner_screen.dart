@@ -1,8 +1,7 @@
-import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import '../../services/ai_service.dart';
+import '../../services/waste_classifier_service.dart';
 import '../../utils/app_theme.dart';
 
 class WasteScannerScreen extends StatefulWidget {
@@ -77,6 +76,17 @@ class _WasteScannerScreenState extends State<WasteScannerScreen>
         'Reduce single-use items',
       ],
     },
+    'Not Waste': {
+      'icon': Icons.person_off,
+      'color': Colors.orange,
+      'emoji': '🚫',
+      'description': 'This does not appear to be waste',
+      'tips': [
+        'Please scan actual waste items',
+        'Point camera at plastic, paper, or food waste',
+        'Avoid scanning people, animals, or backgrounds',
+      ],
+    },
   };
 
   @override
@@ -125,12 +135,8 @@ class _WasteScannerScreenState extends State<WasteScannerScreen>
     setState(() => _isAnalyzing = true);
 
     try {
-      // Convert image to base64
-      final bytes = await _selectedImage!.readAsBytes();
-      final base64Image = base64Encode(bytes);
-
-      // Get AI classification
-      final result = await AIService.classifyWasteFromImage(base64Image);
+      // Use real ML Kit classification
+      final result = await WasteClassifierService.classifyFromFile(_selectedImage!);
 
       setState(() {
         _result = result;
@@ -549,6 +555,35 @@ class _WasteScannerScreenState extends State<WasteScannerScreen>
           ),
 
           const SizedBox(height: 16),
+
+          // Detected Items
+          if (_result!.detectedItems.isNotEmpty) ...[
+            const Text(
+              '🔍 Detected Items:',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 15,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: _result!.detectedItems.map((item) => Container(
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                decoration: BoxDecoration(
+                  color: color.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: color.withOpacity(0.3)),
+                ),
+                child: Text(
+                  item,
+                  style: TextStyle(fontSize: 12, color: color),
+                ),
+              )).toList(),
+            ),
+            const SizedBox(height: 16),
+          ],
 
           // Tips
           const Text(

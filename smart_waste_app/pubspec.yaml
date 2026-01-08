@@ -63,6 +63,7 @@ dependencies:
   
   # AI Features
   http: ^1.2.0
+  image: ^4.1.7
 
 dev_dependencies:
   flutter_test:
