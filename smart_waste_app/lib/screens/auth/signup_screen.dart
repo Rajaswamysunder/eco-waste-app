@@ -129,17 +129,23 @@ class _SignupScreenState extends State<SignupScreen>
   // Convert Firebase errors to user-friendly messages
   String _getErrorMessage(String error) {
     if (error.contains('email-already-in-use')) {
-      return 'This email is already registered. Please login instead.';
+      return 'This email is already registered. Please login or use a different email.';
     } else if (error.contains('invalid-email')) {
       return 'Invalid email address format.';
     } else if (error.contains('weak-password')) {
       return 'Password is too weak. Use at least 6 characters.';
     } else if (error.contains('network-request-failed')) {
-      return 'Network error. Please check your connection.';
+      return 'Network error. Please check your internet connection.';
     } else if (error.contains('too-many-requests')) {
-      return 'Too many attempts. Please try again later.';
+      return 'Too many attempts. Please try again in a few minutes.';
+    } else if (error.contains('operation-not-allowed')) {
+      return 'Email signup is not enabled. Please contact support.';
+    } else if (error.contains('user-disabled')) {
+      return 'This account has been disabled. Please contact support.';
     } else {
-      return 'Signup failed. Please try again.';
+      // Log the actual error for debugging
+      debugPrint('Signup error: $error');
+      return 'Signup failed. Please check your details and try again.';
     }
   }
 

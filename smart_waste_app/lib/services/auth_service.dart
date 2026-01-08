@@ -35,8 +35,22 @@ class AuthService {
     String? assignedStreet,
   }) async {
     try {
+      // First, check if email exists in Firestore (orphaned account check)
+      final existingUser = await _firestore
+          .collection('users')
+          .where('email', isEqualTo: email.toLowerCase().trim())
+          .limit(1)
+          .get();
+      
+      if (existingUser.docs.isNotEmpty) {
+        throw FirebaseAuthException(
+          code: 'email-already-in-use',
+          message: 'This email is already registered. Please login instead.',
+        );
+      }
+
       UserCredential result = await _auth.createUserWithEmailAndPassword(
-        email: email,
+        email: email.trim().toLowerCase(),
         password: password,
       );
 
@@ -46,11 +60,18 @@ class AuthService {
         await user.updateDisplayName(name);
         
         // Send email verification with custom settings
-        await user.sendEmailVerification(_emailVerificationSettings);
+        try {
+          await user.sendEmailVerification(_emailVerificationSettings);
+        } catch (e) {
+          // Continue even if email verification fails
+          if (kDebugMode) {
+            print('Email verification send failed: $e');
+          }
+        }
 
         UserModel userModel = UserModel(
           uid: user.uid,
-          email: email,
+          email: email.trim().toLowerCase(),
           name: name,
           phone: phone,
           address: address,
@@ -63,8 +84,55 @@ class AuthService {
         return userModel;
       }
       return null;
-    } catch (e) {
+    } on FirebaseAuthException catch (e) {
+      if (kDebugMode) {
+        print('Firebase Auth Error: ${e.code} - ${e.message}');
+      }
       rethrow;
+    } catch (e) {
+      if (kDebugMode) {
+        print('Signup Error: $e');
+      }
+      rethrow;
+    }
+  }
+
+  // Check if email is already registered (useful before signup)
+  Future<bool> isEmailRegistered(String email) async {
+    try {
+      // Check Firebase Auth
+      final methods = await _auth.fetchSignInMethodsForEmail(email.trim().toLowerCase());
+      if (methods.isNotEmpty) return true;
+      
+      // Also check Firestore
+      final query = await _firestore
+          .collection('users')
+          .where('email', isEqualTo: email.trim().toLowerCase())
+          .limit(1)
+          .get();
+      return query.docs.isNotEmpty;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  // Delete incomplete/orphaned account (for cleanup)
+  Future<void> deleteOrphanedAccount(String email) async {
+    try {
+      // This requires admin SDK in production
+      // For now, just remove from Firestore if exists
+      final query = await _firestore
+          .collection('users')
+          .where('email', isEqualTo: email.trim().toLowerCase())
+          .get();
+      
+      for (var doc in query.docs) {
+        await doc.reference.delete();
+      }
+    } catch (e) {
+      if (kDebugMode) {
+        print('Cleanup error: $e');
+      }
     }
   }
 
