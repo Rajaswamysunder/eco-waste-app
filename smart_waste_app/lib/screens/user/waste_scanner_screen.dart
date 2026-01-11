@@ -105,46 +105,67 @@ class _WasteScannerScreenState extends State<WasteScannerScreen>
   @override
   void dispose() {
     _animationController.dispose();
+    // Clear image reference to help with memory cleanup
+    _selectedImage = null;
+    _result = null;
     super.dispose();
   }
 
   Future<void> _pickImage(ImageSource source) async {
     try {
+      // Clear previous image to free memory first
+      setState(() {
+        _selectedImage = null;
+        _result = null;
+      });
+
       final XFile? image = await _picker.pickImage(
         source: source,
-        maxWidth: 1024,
-        maxHeight: 1024,
-        imageQuality: 85,
+        maxWidth: 600,  // Small size for stability
+        maxHeight: 600,
+        imageQuality: 50,  // Low quality for memory safety
+        preferredCameraDevice: CameraDevice.rear,
       );
 
-      if (image != null) {
-        setState(() {
-          _selectedImage = File(image.path);
-          _result = null;
-        });
-        await _analyzeImage();
+      if (image != null && mounted) {
+        final file = File(image.path);
+        if (await file.exists()) {
+          setState(() {
+            _selectedImage = file;
+          });
+          await _analyzeImage();
+        }
       }
     } catch (e) {
-      _showError('Failed to pick image: $e');
+      if (mounted) {
+        _showError('Camera error: Please try again');
+      }
     }
   }
 
   Future<void> _analyzeImage() async {
-    if (_selectedImage == null) return;
+    if (_selectedImage == null || !mounted) return;
 
     setState(() => _isAnalyzing = true);
 
     try {
-      // Use real ML Kit classification
+      // Simple delay to show analyzing animation
+      await Future.delayed(const Duration(milliseconds: 1500));
+      
+      // Get classification result
       final result = await WasteClassifierService.classifyFromFile(_selectedImage!);
 
-      setState(() {
-        _result = result;
-        _isAnalyzing = false;
-      });
+      if (mounted) {
+        setState(() {
+          _result = result;
+          _isAnalyzing = false;
+        });
+      }
     } catch (e) {
-      setState(() => _isAnalyzing = false);
-      _showError('Analysis failed: $e');
+      if (mounted) {
+        setState(() => _isAnalyzing = false);
+        _showError('Analysis failed. Please try again.');
+      }
     }
   }
 

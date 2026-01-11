@@ -15,6 +15,7 @@ import 'notifications_screen.dart';
 import 'chatbot_screen.dart';
 import 'help_support_screen.dart';
 import 'settings_screen.dart';
+import '../ai/ai_dashboard_screen.dart';
 
 class UserHomeScreen extends StatefulWidget {
   const UserHomeScreen({super.key});
@@ -743,6 +744,21 @@ class _UserHomeScreenState extends State<UserHomeScreen>
       floatingActionButton: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
+          // AI Dashboard FAB
+          FloatingActionButton(
+            heroTag: 'ai_dashboard',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AIDashboardScreen()),
+              );
+            },
+            backgroundColor: Colors.deepPurple,
+            mini: true,
+            child: const Icon(Icons.psychology, color: Colors.white, size: 22),
+            tooltip: 'AI Features',
+          ),
+          const SizedBox(height: 8),
           // Chatbot FAB
           FloatingActionButton(
             heroTag: 'chatbot',

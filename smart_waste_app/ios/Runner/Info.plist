@@ -49,5 +49,18 @@
 	<string>Eco Waste needs camera access to take your profile photo.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Eco Waste needs photo library access to select your profile photo.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Eco Waste needs your location to show nearby waste collection points and schedule pickups.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Eco Waste needs your location to show nearby waste collection points and schedule pickups.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Eco Waste needs your location to notify you about nearby collection services.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
 </dict>
 </plist>
